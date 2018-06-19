@@ -1,19 +1,17 @@
 package com.springframework.service;
 
+
 import com.springframework.repository.GreetingRepository;
 
-/*@Service
-@Primary
-@Profile("es")*/
-public class PrimarySpanishGreetingsService implements GreetingService {
+public class PrimaryGermanGreetingsService implements GreetingService {
     private final GreetingRepository greetingRepository;
 
-    public PrimarySpanishGreetingsService(GreetingRepository greetingRepository) {
+    public PrimaryGermanGreetingsService(GreetingRepository greetingRepository) {
         this.greetingRepository = greetingRepository;
     }
 
     @Override
     public String sayGreetings() {
-        return greetingRepository.getSpanishGreeting();
+        return greetingRepository.getGermanGreeting();
     }
 }
